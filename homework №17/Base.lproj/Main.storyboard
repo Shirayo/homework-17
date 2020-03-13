@@ -1,24 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="homework__17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-PL-Emt">
+                                <rect key="frame" x="157" y="428" width="100" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZKf-zm-48p"/>
+                                    <constraint firstAttribute="height" constant="50" id="lVi-d1-Xdo"/>
+                                </constraints>
+                                <state key="normal" title="Timer"/>
+                                <connections>
+                                    <segue destination="ed0-gM-p3p" kind="show" id="ZH8-4u-aM7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nff-re-ZFW">
+                                <rect key="frame" x="157" y="498" width="100" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GY2-zD-4bn"/>
+                                    <constraint firstAttribute="width" constant="100" id="rid-jR-79G"/>
+                                </constraints>
+                                <state key="normal" title="Rainbow"/>
+                                <connections>
+                                    <segue destination="GSO-wE-mBH" kind="show" id="5qk-eo-qsk"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUp-FG-aeS">
+                                <rect key="frame" x="87" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nff-re-ZFW" firstAttribute="top" secondItem="Qc9-PL-Emt" secondAttribute="bottom" constant="20" id="CJw-n3-Rwy"/>
+                            <constraint firstItem="Qc9-PL-Emt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DXc-JI-eFx"/>
+                            <constraint firstItem="Qc9-PL-Emt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Luv-PL-ZjS"/>
+                            <constraint firstItem="nff-re-ZFW" firstAttribute="centerX" secondItem="Qc9-PL-Emt" secondAttribute="centerX" id="dCJ-Bh-q0d"/>
+                            <constraint firstItem="nff-re-ZFW" firstAttribute="width" secondItem="Qc9-PL-Emt" secondAttribute="height" multiplier="2:1" id="yTn-A8-sEr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="openRainbowButton" destination="nff-re-ZFW" id="z7F-my-tVh"/>
+                        <outlet property="openTimerButton" destination="Qc9-PL-Emt" id="asp-xC-gJs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="180.80357142857142"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="mOf-Hd-0yz">
+            <objects>
+                <viewController id="ed0-gM-p3p" customClass="TimerViewController" customModule="homework__17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkt-fu-fNy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx1-2D-TUO">
+                                <rect key="frame" x="117" y="660" width="180" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="D7k-X9-LSL"/>
+                                    <constraint firstAttribute="height" constant="80" id="ZWY-3W-o9i"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPauseButtonDidClick:" destination="ed0-gM-p3p" eventType="touchUpInside" id="VJz-h5-IKl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb1-kd-ggs">
+                                <rect key="frame" x="122" y="354" width="170" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8v4-rc-6mE"/>
+                                    <constraint firstAttribute="width" constant="170" id="OHG-5p-d7n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddu-Ad-gn2">
+                                <rect key="frame" x="17" y="660" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ddu-Ad-gn2" secondAttribute="height" multiplier="1:1" id="48m-v8-yzq"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonDidClick:" destination="ed0-gM-p3p" eventType="touchUpInside" id="nZl-x9-SgS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hx1-2D-TUO" firstAttribute="leading" secondItem="0tl-l5-bxk" secondAttribute="leading" constant="117" id="4RH-Dy-ao4"/>
+                            <constraint firstItem="Ddu-Ad-gn2" firstAttribute="height" secondItem="hx1-2D-TUO" secondAttribute="height" id="FZH-vs-ocI"/>
+                            <constraint firstItem="Ddu-Ad-gn2" firstAttribute="baseline" secondItem="hx1-2D-TUO" secondAttribute="baseline" id="KQO-nn-xuc"/>
+                            <constraint firstItem="Vb1-kd-ggs" firstAttribute="centerX" secondItem="0tl-l5-bxk" secondAttribute="centerX" id="czE-lu-6vG"/>
+                            <constraint firstItem="hx1-2D-TUO" firstAttribute="centerX" secondItem="0tl-l5-bxk" secondAttribute="centerX" id="fw9-HX-SfE"/>
+                            <constraint firstItem="Vb1-kd-ggs" firstAttribute="centerY" secondItem="0tl-l5-bxk" secondAttribute="centerY" id="jQy-Dk-cPT"/>
+                            <constraint firstItem="Ddu-Ad-gn2" firstAttribute="top" secondItem="hx1-2D-TUO" secondAttribute="top" id="mHR-E5-9E2"/>
+                            <constraint firstItem="hx1-2D-TUO" firstAttribute="leading" secondItem="Ddu-Ad-gn2" secondAttribute="trailing" constant="20" id="qq8-ev-JoW"/>
+                            <constraint firstItem="0tl-l5-bxk" firstAttribute="bottom" secondItem="hx1-2D-TUO" secondAttribute="bottom" constant="68" id="x60-wD-Yn8"/>
+                            <constraint firstItem="0tl-l5-bxk" firstAttribute="trailing" secondItem="hx1-2D-TUO" secondAttribute="trailing" constant="117" id="zzN-4c-97j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0tl-l5-bxk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NTM-ct-lXn"/>
+                    <connections>
+                        <outlet property="resetButton" destination="Ddu-Ad-gn2" id="1Yt-ji-nFj"/>
+                        <outlet property="startPauseButton" destination="hx1-2D-TUO" id="6kt-ji-gyH"/>
+                        <outlet property="timerLabel" destination="Vb1-kd-ggs" id="maG-il-lsx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAg-DS-J9E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="-199.55357142857142"/>
+        </scene>
+        <!--Rainbow View Controller-->
+        <scene sceneID="ppz-pB-Gsf">
+            <objects>
+                <viewController id="GSO-wE-mBH" customClass="RainbowViewController" customModule="homework__17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xMR-h6-SxI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywi-SN-pRb">
+                                <rect key="frame" x="117" y="660" width="180" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QbM-lN-fqJ"/>
+                                    <constraint firstAttribute="width" constant="180" id="wzC-JB-BHs"/>
+                                </constraints>
+                                <state key="normal" title="Add view">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addViewDidClick:" destination="GSO-wE-mBH" eventType="touchUpInside" id="fx2-dv-3X7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7UQ-rP-Gpy" firstAttribute="bottom" secondItem="Ywi-SN-pRb" secondAttribute="bottom" constant="68" id="C81-p8-lFD"/>
+                            <constraint firstItem="Ywi-SN-pRb" firstAttribute="centerX" secondItem="7UQ-rP-Gpy" secondAttribute="centerX" id="I2K-zp-c1T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7UQ-rP-Gpy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LyQ-9u-Vgo"/>
+                    <connections>
+                        <outlet property="addViewButton" destination="Ywi-SN-pRb" id="fh5-QK-V6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omn-hT-Gva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="573.88392857142856"/>
         </scene>
     </scenes>
 </document>

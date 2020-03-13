@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var openTimerButton: UIButton!
+    @IBOutlet weak var openRainbowButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 

@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8460C652241AB30A007DAF4F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460C651241AB30A007DAF4F /* TimerViewController.swift */; };
+		8460C654241AB3E1007DAF4F /* RainbowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460C653241AB3E1007DAF4F /* RainbowViewController.swift */; };
 		847E96162414075000CB27AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E96152414075000CB27AC /* AppDelegate.swift */; };
 		847E96182414075000CB27AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E96172414075000CB27AC /* SceneDelegate.swift */; };
-		847E961A2414075000CB27AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E96192414075000CB27AC /* ViewController.swift */; };
+		847E961A2414075000CB27AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E96192414075000CB27AC /* MainViewController.swift */; };
 		847E961D2414075000CB27AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E961B2414075000CB27AC /* Main.storyboard */; };
 		847E961F2414075300CB27AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847E961E2414075300CB27AC /* Assets.xcassets */; };
 		847E96222414075300CB27AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E96202414075300CB27AC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8460C651241AB30A007DAF4F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		8460C653241AB3E1007DAF4F /* RainbowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowViewController.swift; sourceTree = "<group>"; };
 		847E96122414075000CB27AC /* homework №17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "homework №17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847E96152414075000CB27AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847E96172414075000CB27AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		847E96192414075000CB27AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847E96192414075000CB27AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		847E961C2414075000CB27AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		847E961E2414075300CB27AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847E96212414075300CB27AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				847E96152414075000CB27AC /* AppDelegate.swift */,
 				847E96172414075000CB27AC /* SceneDelegate.swift */,
-				847E96192414075000CB27AC /* ViewController.swift */,
+				847E96192414075000CB27AC /* MainViewController.swift */,
+				8460C651241AB30A007DAF4F /* TimerViewController.swift */,
+				8460C653241AB3E1007DAF4F /* RainbowViewController.swift */,
 				847E961B2414075000CB27AC /* Main.storyboard */,
 				847E961E2414075300CB27AC /* Assets.xcassets */,
 				847E96202414075300CB27AC /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847E961A2414075000CB27AC /* ViewController.swift in Sources */,
+				8460C652241AB30A007DAF4F /* TimerViewController.swift in Sources */,
+				847E961A2414075000CB27AC /* MainViewController.swift in Sources */,
+				8460C654241AB3E1007DAF4F /* RainbowViewController.swift in Sources */,
 				847E96162414075000CB27AC /* AppDelegate.swift in Sources */,
 				847E96182414075000CB27AC /* SceneDelegate.swift in Sources */,
 			);
